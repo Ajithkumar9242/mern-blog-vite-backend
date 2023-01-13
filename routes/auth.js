@@ -30,7 +30,7 @@ router.post("/login" , async (req,res) =>{
     try {
         const user = await User.findOne({username: req.body.username})
 
-        !user && console.log("NO USERS FOUND");
+        !user && res.json("NO USERS FOUND");
 
         const validate = await bcrypt.compare(req.body.password, user.password)
 
