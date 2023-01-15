@@ -17,7 +17,7 @@ app.use("/images", express.static(path.join(__dirname + "/images")))
 mongoose.set("strictQuery", false);
 mongoose.connect(process.env.MONGO_URL)
 .then(console.log(`Connected to Mongo`))
-.catch(console.log(`Err`))
+.catch((error) => console.log(`Err`))
 
 
 const storage = multer.diskStorage({
