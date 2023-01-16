@@ -8,7 +8,7 @@ const userRoute = require('./routes/users')
 const postRoute = require('./routes/posts')
 const categoryRoute = require('./routes/category')
 const path = require('path')
-const PORT = process.env.PORTS
+const PORT = process.env.PORT || 4000
 const app = express()
 
 app.use(express.json())
